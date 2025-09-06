@@ -1,0 +1,258 @@
+[
+  {
+    "name": "Attikan Estate",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Dark Roast",
+    "bitterness": "medium-high",
+    "acidity": "medium",
+    "origin": {
+      "location": "Biligiriranga Hills, Karnataka",
+      "altitude": 1650
+    },
+    "processing": "Washed",
+    "description": "Attikan Estate's arabica coffee beans come from the Biligiriranga Hills in Karnataka and is one of our most popular coffees. Sweet with fruity overtones and balanced acidity, this is the darkest of our standard medium roasts and recommended for espresso lovers. It is a versatile coffee that also works for manual brewing such as Moka Pot, South Indian Filter and AeroPress. Located to the south of Mysore, the Biligiriranga Hills, or 'white hills' are named after the mist that hangs over the region. At 1650 meters, it is amongst the highest coffee growing regions in India and grows Selection 9, Selection 795, Cauvery and Kent varieties of Arabica, along with Silver Oaks, citrus, and fig trees.",
+    "price": 70000,
+    "url": "https://bluetokaicoffee.com/products/attikan-estate"
+  },
+  {
+    "name": "French Roast",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Dark Roast",
+    "bitterness": "high",
+    "acidity": "low",
+    "origin": {
+      "location": "Various Indian Estates",
+      "altitude": null
+    },
+    "processing": "Washed",
+    "description": "Our French Roast is a dark, bold coffee with intense flavors and low acidity. Perfect for those who enjoy a strong, robust cup of coffee.",
+    "price": 65000,
+    "url": "https://bluetokaicoffee.com/products/french-roast"
+  },
+  {
+    "name": "Silver Oak Cafe Blend",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Roast",
+    "bitterness": "medium",
+    "acidity": "medium",
+    "origin": {
+      "location": "Karnataka, India",
+      "altitude": 1200
+    },
+    "processing": "Washed",
+    "description": "A well-balanced blend perfect for cafe-style brewing. Smooth and approachable with notes of chocolate and nuts.",
+    "price": 60000,
+    "url": "https://bluetokaicoffee.com/products/silver-oak-cafe-blend"
+  },
+  {
+    "name": "Vienna Roast",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Dark Roast",
+    "bitterness": "medium-high",
+    "acidity": "medium",
+    "origin": {
+      "location": "Indian Coffee Estates",
+      "altitude": 1000
+    },
+    "processing": "Washed",
+    "description": "Vienna Roast offers a rich, full-bodied experience with caramelized sweetness and a smooth finish.",
+    "price": 68000,
+    "url": "https://bluetokaicoffee.com/products/vienna-roast"
+  },
+  {
+    "name": "M.S. Estate",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Roast",
+    "bitterness": "medium",
+    "acidity": "medium-high",
+    "origin": {
+      "location": "Karnataka, India",
+      "altitude": 1400
+    },
+    "processing": "Washed",
+    "description": "M.S. Estate coffee brings bright acidity and floral notes, perfect for those who enjoy a lively cup.",
+    "price": 72000,
+    "url": "https://bluetokaicoffee.com/products/m-s-estate"
+  },
+  {
+    "name": "Kalledevarapura Estate - Pulp Sun Dried",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Roast",
+    "bitterness": "medium",
+    "acidity": "medium",
+    "origin": {
+      "location": "Kalledevarapura Estate, Karnataka",
+      "altitude": 1100
+    },
+    "processing": "Natural",
+    "description": "This unique natural processed coffee from Kalledevarapura Estate offers fruity sweetness and complex flavors. The pulp sun-dried method brings out natural sugars and creates a distinctive taste profile.",
+    "price": 75000,
+    "url": "https://bluetokaicoffee.com/products/kalledevarapura-pulp-sun-dried"
+  },
+  {
+    "name": "Monsoon Malabar AA- Hoysala Estate",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Roast",
+    "bitterness": "low",
+    "acidity": "low",
+    "origin": {
+      "location": "Hoysala Estate, Karnataka",
+      "altitude": 1200
+    },
+    "processing": "Monsooned",
+    "description": "Monsoon Malabar is a unique Indian coffee that undergoes the traditional monsooning process. This creates a distinctive low-acid, full-bodied coffee with earthy, spicy notes.",
+    "price": 80000,
+    "url": "https://bluetokaicoffee.com/products/monsoon-malabar"
+  },
+  {
+    "name": "Cold Brew Blend Bold",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Dark Roast",
+    "bitterness": "high",
+    "acidity": "low",
+    "origin": {
+      "location": "Indian Coffee Estates",
+      "altitude": null
+    },
+    "processing": "Washed",
+    "description": "Specially crafted for cold brewing, this bold blend delivers rich, smooth flavors perfect for iced coffee preparations.",
+    "price": 65000,
+    "url": "https://bluetokaicoffee.com/products/cold-brew-blend-dark-roast"
+  },
+  {
+    "name": "Amaltas Blend",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Light Roast",
+    "bitterness": "low",
+    "acidity": "high",
+    "origin": {
+      "location": "Karnataka, India",
+      "altitude": 1300
+    },
+    "processing": "Washed",
+    "description": "Amaltas Blend is a bright, light roast that showcases the natural acidity and floral notes of Indian arabica coffee.",
+    "price": 70000,
+    "url": "https://bluetokaicoffee.com/products/cold-brew-blend-light"
+  },
+  {
+    "name": "Thogarihunkal Estate | Medium Roast - Easy Pour",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Roast",
+    "bitterness": "medium",
+    "acidity": "medium",
+    "origin": {
+      "location": "Thogarihunkal Estate, Karnataka",
+      "altitude": 1200
+    },
+    "processing": "Washed",
+    "description": "Convenient easy-pour coffee sachets from Thogarihunkal Estate. Perfect for quick brewing with consistent quality.",
+    "price": 45000,
+    "url": "https://bluetokaicoffee.com/products/thogarihunkal-estate-easy-pour-coffee-sachets"
+  },
+  {
+    "name": "Attikan Estate | Medium-Dark Roast - Easy Pour",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Dark Roast",
+    "bitterness": "medium-high",
+    "acidity": "medium",
+    "origin": {
+      "location": "Biligiriranga Hills, Karnataka",
+      "altitude": 1650
+    },
+    "processing": "Washed",
+    "description": "The same great Attikan Estate coffee in convenient easy-pour sachets. Perfect for on-the-go brewing.",
+    "price": 45000,
+    "url": "https://bluetokaicoffee.com/products/attikan-estate-easy-pour-coffee-sachets"
+  },
+  {
+    "name": "Vienna | Dark Roast - Easy Pour",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Dark Roast",
+    "bitterness": "high",
+    "acidity": "low",
+    "origin": {
+      "location": "Indian Coffee Estates",
+      "altitude": 1000
+    },
+    "processing": "Washed",
+    "description": "Rich Vienna Roast in easy-pour format. Full-bodied and smooth with caramelized sweetness.",
+    "price": 45000,
+    "url": "https://bluetokaicoffee.com/products/vienna-dark-roast-easy-pour-coffee-sachets"
+  },
+  {
+    "name": "Mixed | Light to Dark Roasts - Easy Pour",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Mixed",
+    "bitterness": "medium",
+    "acidity": "medium",
+    "origin": {
+      "location": "Various Indian Estates",
+      "altitude": null
+    },
+    "processing": "Washed",
+    "description": "A variety pack featuring different roast levels. Perfect for exploring different flavor profiles.",
+    "price": 50000,
+    "url": "https://bluetokaicoffee.com/products/mixed-light-to-dark-roasts"
+  },
+  {
+    "name": "Monsoon Malabar | Medium-Dark Roast - Easy Pour",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Dark Roast",
+    "bitterness": "low",
+    "acidity": "low",
+    "origin": {
+      "location": "Hoysala Estate, Karnataka",
+      "altitude": 1200
+    },
+    "processing": "Monsooned",
+    "description": "Traditional Monsoon Malabar in convenient sachets. Earthy, spicy notes with low acidity.",
+    "price": 45000,
+    "url": "https://bluetokaicoffee.com/products/monsoon-malabar-easy-pour-coffee-sachets"
+  },
+  {
+    "name": "Seethargundu Estate | Light Roast - Easy Pour",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Light Roast",
+    "bitterness": "low",
+    "acidity": "high",
+    "origin": {
+      "location": "Seethargundu Estate, Karnataka",
+      "altitude": 1400
+    },
+    "processing": "Washed",
+    "description": "Bright, light roast from Seethargundu Estate. High acidity with floral and citrus notes.",
+    "price": 45000,
+    "url": "https://bluetokaicoffee.com/products/seethargundu-estate-easy-pour-coffee-sachets"
+  },
+  {
+    "name": "Jacaranda Blend | Medium Dark Roast - Easy Pour",
+    "roaster": "Blue Tokai",
+    "type": "arabica",
+    "roastLevel": "Medium Dark Roast",
+    "bitterness": "medium-high",
+    "acidity": "medium",
+    "origin": {
+      "location": "Karnataka, India",
+      "altitude": 1200
+    },
+    "processing": "Washed",
+    "description": "Jacaranda Blend offers a rich, full-bodied experience in easy-pour format. Perfect for those who enjoy a robust cup.",
+    "price": 45000,
+    "url": "https://bluetokaicoffee.com/products/jacaranda-blend-easy-pour-coffee-sachets"
+  }
+]
