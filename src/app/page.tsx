@@ -83,77 +83,45 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-amber-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-3xl font-bold text-foreground flex items-center gap-3">
-                <span className="text-4xl">☕</span>
-                Roast Radar
-              </h1>
-              <p className="text-muted-foreground mt-1">Discover exceptional specialty coffee</p>
-            </div>
-            <div className="flex items-center gap-4">
-              <Button className="bg-amber-600 hover:bg-amber-700">
-                Sign In
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Stats */}
-        <div className="mb-8">
-          <Card className="border-amber-100">
-            <CardContent className="p-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <h2 className="text-2xl font-bold text-foreground">Bean Bank</h2>
-                  <p className="text-muted-foreground mt-1">
-                    {coffees.length} {coffees.length === 1 ? 'coffee' : 'coffees'} from {new Set(coffees.map(c => c.roaster)).size} roasters
-                  </p>
-                </div>
-                <div className="text-right">
-                  <div className="text-3xl font-bold text-amber-600">
-                    {coffees.length}
-                  </div>
-                  <div className="text-sm text-muted-foreground">Total Coffees</div>
-                </div>
+      <>
+      {/* Stats */}
+      <div className="mb-8">
+        <Card className="border-amber-100">
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-2xl font-bold text-foreground">Bean Bank</h2>
+                <p className="text-muted-foreground mt-1">
+                  {coffees.length} {coffees.length === 1 ? 'coffee' : 'coffees'} from {new Set(coffees.map(c => c.roaster)).size} roasters
+                </p>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+              <div className="text-right">
+                <div className="text-3xl font-bold text-amber-600">
+                  {coffees.length}
+                </div>
+                <div className="text-sm text-muted-foreground">Total Coffees</div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
 
-        {/* Coffee Grid */}
-        {coffees.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {coffees.map((coffee) => (
-              <CoffeeCard key={coffee.id} coffee={coffee} />
-            ))}
-          </div>
-        ) : (
-          <Card className="py-12">
-            <CardContent className="text-center">
-              <div className="text-6xl mb-4">☕</div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">No coffees found</h3>
-              <p className="text-muted-foreground">Check back later for new additions to our collection.</p>
-            </CardContent>
-          </Card>
-        )}
-      </main>
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-amber-100 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-muted-foreground">
-            <p>Made with ☕ by <a href="https://github.com/SuyashGoylit" className="text-primary underline">Suyash Goylit</a></p>
-          </div>
+      {/* Coffee Grid */}
+      {coffees.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          {coffees.map((coffee) => (
+            <CoffeeCard key={coffee.id} coffee={coffee} />
+          ))}
         </div>
-      </footer>
-    </div>
+      ) : (
+        <Card className="py-12">
+          <CardContent className="text-center">
+            <div className="text-6xl mb-4">☕</div>
+            <h3 className="text-xl font-semibold text-foreground mb-2">No coffees found</h3>
+            <p className="text-muted-foreground">Check back later for new additions to our collection.</p>
+          </CardContent>
+        </Card>
+      )}
+      </>
   );
 }

@@ -49,3 +49,6 @@ docker-compose.yml
 
 # scraping scripts
 scripts
+
+# clerk configuration (can include secrets)
+/.clerk/
