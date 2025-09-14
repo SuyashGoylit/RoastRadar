@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import { UserSync } from '@/components/UserSync';
+import { WishlistProvider } from '@/contexts/WishlistContext';
 import { ClerkProvider } from '@clerk/nextjs';
 
 const geistSans = Geist({
@@ -30,17 +31,19 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <UserSync />
-          <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
-            <Header />
-            
-            {/* Main Content */}
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              {children}
-            </main>
+          <WishlistProvider>
+            <UserSync />
+            <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-50">
+              <Header />
+              
+              {/* Main Content */}
+              <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                {children}
+              </main>
 
-            <Footer />
-          </div>
+              <Footer />
+            </div>
+          </WishlistProvider>
         </body>
       </html>
     </ClerkProvider>

@@ -1,6 +1,9 @@
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useWishlistContext } from "@/contexts/WishlistContext";
+import { Heart } from "lucide-react";
+import { useState } from "react";
 
 interface Coffee {
   id: string;
@@ -27,8 +30,20 @@ interface CoffeeCardProps {
 }
 
 export default function CoffeeCard({ coffee }: CoffeeCardProps) {
+  const { toggleWishlist, isInWishlist, loading } = useWishlistContext();
+  const [isToggling, setIsToggling] = useState(false);
+
   const formatPrice = (priceInPaise: number) => {
     return `₹${(priceInPaise / 100).toFixed(0)}`;
+  };
+
+  const handleWishlistToggle = async () => {
+    setIsToggling(true);
+    try {
+      await toggleWishlist(coffee.id);
+    } finally {
+      setIsToggling(false);
+    }
   };
 
   const getRoastVariant = (roastLevel: string) => {
@@ -39,129 +54,77 @@ export default function CoffeeCard({ coffee }: CoffeeCardProps) {
     return 'outline';
   };
 
-  const getBitternessColor = (bitterness: string) => {
-    const level = bitterness.toLowerCase();
-    if (level.includes('low')) return 'text-green-600';
-    if (level.includes('medium')) return 'text-yellow-600';
-    if (level.includes('high')) return 'text-red-600';
-    return 'text-muted-foreground';
-  };
-
-  const getAcidityColor = (acidity: string) => {
-    const level = acidity.toLowerCase();
-    if (level.includes('low')) return 'text-green-600';
-    if (level.includes('medium')) return 'text-yellow-600';
-    if (level.includes('high')) return 'text-red-600';
-    return 'text-muted-foreground';
-  };
 
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+    <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 h-full flex flex-col">
       {/* Coffee Image Placeholder */}
       <div className="h-48 bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
         <div className="text-6xl">☕</div>
       </div>
 
       <CardHeader className="pb-3">
-        {/* Name and Roaster */}
-        <div>
-          <h3 className="text-xl font-bold text-foreground mb-1 line-clamp-2">
-            {coffee.name}
+        {/* Title - Coffee Name */}
+        <div className="mb-3">
+          <h3 className="text-xl font-bold text-foreground line-clamp-2">
+            {coffee.name || "Unknown Coffee"}
           </h3>
-          <p className="text-sm text-muted-foreground">by {coffee.roaster}</p>
         </div>
 
-        {/* Price */}
-        <div>
-          <span className="text-2xl font-bold text-amber-600">
-            {formatPrice(coffee.price)}
-          </span>
+        {/* Roaster */}
+        <div className="mb-3">
+          <p className="text-sm text-muted-foreground">
+            by {coffee.roaster || "Unknown Roaster"}
+          </p>
+        </div>
+
+        {/* Roast Level */}
+        <div className="mb-3">
+          <Badge variant={getRoastVariant(coffee.roastLevel || "Unknown") as "default" | "secondary" | "destructive" | "outline"}>
+            {coffee.roastLevel || "Unknown Roast"}
+          </Badge>
         </div>
       </CardHeader>
 
-      <CardContent className="pt-0">
-        {/* Roast Level */}
-        {coffee.roastLevel && (
-          <div className="mb-3">
-            <Badge variant={getRoastVariant(coffee.roastLevel) as "default" | "secondary" | "destructive" | "outline"}>
-              {coffee.roastLevel}
-            </Badge>
-          </div>
-        )}
-
-        {/* Origin */}
-        {coffee.origin.location && (
-          <div className="mb-3">
-            <p className="text-sm text-muted-foreground">
-              <span className="font-medium">Origin:</span> {coffee.origin.location}
-              {coffee.origin.altitude && (
-                <span className="ml-1">({coffee.origin.altitude}m)</span>
-              )}
-            </p>
-          </div>
-        )}
-
-        {/* Processing */}
-        {coffee.processing && (
-          <div className="mb-3">
-            <p className="text-sm text-muted-foreground">
-              <span className="font-medium">Processing:</span> {coffee.processing}
-            </p>
-          </div>
-        )}
-
-        {/* Bitterness and Acidity */}
-        <div className="flex gap-4 mb-4">
-          {coffee.bitterness && (
-            <div className="text-sm">
-              <span className="font-medium text-foreground">Bitterness:</span>
-              <span className={`ml-1 font-medium ${getBitternessColor(coffee.bitterness)}`}>
-                {coffee.bitterness}
-              </span>
-            </div>
-          )}
-          {coffee.acidity && (
-            <div className="text-sm">
-              <span className="font-medium text-foreground">Acidity:</span>
-              <span className={`ml-1 font-medium ${getAcidityColor(coffee.acidity)}`}>
-                {coffee.acidity}
-              </span>
-            </div>
-          )}
-        </div>
-
+      <CardContent className="pt-0 flex-1">
         {/* Description */}
-        {coffee.description && (
-          <div className="mb-4">
-            <p className="text-sm text-muted-foreground line-clamp-3">
-              {coffee.description}
-            </p>
-          </div>
-        )}
+        <div className="mb-4">
+          <p className="text-sm text-muted-foreground line-clamp-4">
+            {coffee.description || "No description available for this coffee."}
+          </p>
+        </div>
       </CardContent>
 
       <CardFooter className="pt-0">
         {/* Action Buttons */}
         <div className="flex gap-2 w-full">
-          <Button className="flex-1" size="sm">
-            Add to Wishlist
+          <Button 
+            className="flex-1 cursor-pointer hover:scale-105 transition-transform" 
+            size="sm"
+            variant={isInWishlist(coffee.id) ? "default" : "outline"}
+            onClick={handleWishlistToggle}
+            disabled={loading || isToggling}
+          >
+            <Heart 
+              className={`w-4 h-4 mr-2 ${
+                isInWishlist(coffee.id) 
+                  ? "fill-red-500 text-red-500" 
+                  : "text-muted-foreground"
+              }`} 
+            />
+            {isInWishlist(coffee.id) ? "In Wishlist" : "Add to Wishlist"}
           </Button>
-          {coffee.url && (
-            <Button 
-              variant="outline" 
-              size="sm" 
-              className="flex-1"
-              asChild
-            >
-              <a
-                href={coffee.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Details
-              </a>
-            </Button>
-          )}
+          
+          {/* Price Button */}
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="flex-1 cursor-default"
+            disabled
+          >
+            <span className="text-amber-600 font-bold">
+              {formatPrice(coffee.price || 0)}
+            </span>
+          </Button>
         </div>
       </CardFooter>
     </Card>
